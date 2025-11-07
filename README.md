@@ -1,2 +1,1 @@
-# novahive-org.github.io
-# novahive-org.github.io
+NovaHive is a collaborative network advancing AI-driven research, cybersecurity, and digital innovation across Europe and beyond. This repository hosts the official NovaHive website, showcasing our consortium partners, ongoing projects, and shared initiatives aimed at building trustworthy, secure, and impactful AI technologies.
