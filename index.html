@@ -15,6 +15,100 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<style>
+		#people .image.left {
+			width: 100px;
+			height: 100px;
+		}
+
+		#people .image.left:before {
+			display: none !important;
+		}
+
+		#people .image.left img {
+			width: 100px !important;
+			height: 100px !important;
+			object-fit: cover;
+			display: block;
+			position: relative;
+			z-index: 1;
+		}
+
+		#people .from-left {
+			-moz-transition: -moz-transform 0.75s ease;
+			-webkit-transition: -webkit-transform 0.75s ease;
+			-ms-transition: -ms-transform 0.75s ease;
+			transition: transform 0.75s ease;
+			-moz-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0);
+		}
+
+		#people .from-right {
+			-moz-transition: -moz-transform 0.75s ease;
+			-webkit-transition: -webkit-transform 0.75s ease;
+			-ms-transition: -ms-transform 0.75s ease;
+			transition: transform 0.75s ease;
+			-moz-transform: translateX(0);
+			-webkit-transform: translateX(0);
+			-ms-transform: translateX(0);
+			transform: translateX(0);
+		}
+
+		#people.inactive .from-left {
+			-moz-transform: translateX(-14em);
+			-webkit-transform: translateX(-14em);
+			-ms-transform: translateX(-14em);
+			transform: translateX(-14em);
+		}
+
+		#people.inactive .from-right {
+			-moz-transform: translateX(14em);
+			-webkit-transform: translateX(14em);
+			-ms-transform: translateX(14em);
+			transform: translateX(14em);
+		}
+
+		@media screen and (max-width: 736px) {
+			#people .image.left {
+				float: none;
+				display: block;
+				margin: 0 auto 1.5em auto;
+				text-align: center;
+				width: auto;
+				height: auto;
+			}
+
+			#people .image.left img {
+				width: auto !important;
+				max-width: 150px;
+				height: auto !important;
+			}
+
+			#people h3 {
+				text-align: center;
+				margin-top: 0;
+			}
+		}
+
+		.poptrox-popup {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.poptrox-popup .caption {
+			position: relative !important;
+			width: auto !important;
+			max-width: 80vw !important;
+			left: auto !important;
+			bottom: auto !important;
+			box-sizing: border-box;
+			word-wrap: break-word;
+			overflow-wrap: break-word;
+		}
+	</style>
 </head>
 
 <body class="is-preload">
@@ -54,13 +148,13 @@
 			<header>
 				<h2>What We Do</h2>
 			</header>
-			<p>We are a collaborative community of experts from universities, research
-				laboratories, and industry, united by a shared mission to create a safer
-				and smarter digital world. By combining cutting-edge academic research
-				with practical industry insights, we drive innovation in AI-powered
-				digital solutions. Together, we bridge the gap between discovery and
-				application, transforming ideas into impactful technologies that
-				strengthen trust and resilience in the digital age.</p>
+			<p>We apply state-of-the-art machine learning and AI — including emerging
+				agentic AI approaches — to address real-world challenges. By combining
+				rigorous scientific research with practical industry insights, we
+				develop scalable and trustworthy digital solutions. Our work bridges
+				the gap between discovery and application, transforming innovative
+				ideas into impactful technologies that strengthen trust, security, and
+				resilience in the digital age.</p>
 		</div>
 		<a href="#two" class="button style2 down anchored">Next</a>
 	</section>
@@ -71,14 +165,13 @@
 			<header>
 				<h2>Who We Are</h2>
 			</header>
-			<p>We are a multidisciplinary alliance of researchers, ISP, research
-				enters, and engineering companies dedicated to advancing innovation in
-				the digital landscape. By uniting academic expertise with industry
-				experience, we tackle real-world challenges through cutting-edge
-				research and technology development. Our mission is to drive progress
-				in areas such as cybersecurity, AI innovation, and digital
-				infrastructure—building a connected, secure, and intelligent future
-				together.</p>
+			<p>We are researchers who collaborate with experts from universities,
+				research laboratories, and industry across EU countries. Our team
+				combines strong academic research backgrounds with
+				industry experience, united by a shared mission to create a safer and
+				smarter digital world. This blend of scientific depth and real-world
+				insight enables us to understand complex challenges and develop
+				solutions that are both innovative and practical.</p>
 		</div>
 		<a href="#work" class="button style2 down anchored">Next</a>
 	</section>
@@ -103,33 +196,6 @@
 			<!-- Gallery  -->
 			<div class="gallery">
 				<article class="from-left">
-					<!-- <div class="image fit"><img src="images/thumbs/01.jpg" alt="" />
-						<div
-							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(57, 69, 75, 0.7); padding: 1em; text-align: left; color: #fff; overflow-y: auto; box-sizing: border-box; z-index: 1;">
-							<div
-								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/css/images/overlay.png'); z-index: 1; pointer-events: none;">
-							</div>
-							<div style="position: relative; z-index: 2;">
-								<p style="margin: 0;">
-									<br>
-									<b>SAPPAN project</b> d(Sharing and Automation for Privacy Preserving Attack
-									Neutralization) project developed a collaborative platform to improve cyber-attack
-									detection, response, and recovery across organisations while maintaining data
-									privacy.
-									Running from 2019 to 2022 under Horizon 2020, it focused on enabling federated
-									threat
-									intelligence sharing, automated incident response workflows, and
-									machine-learning-based
-									analytics that operate on anonymised data. By combining privacy-preserving data
-									aggregation, visual analytics for SOC operators, and reusable incident response
-									playbooks, SAPPAN allowed companies, national research networks, and security teams
-									to
-									jointly enhance situational awareness and neutralize threats more efficiently
-									without
-									exposing sensitive information.
-								</p>
-							</div>
-						</div> -->
 					<a href="images/thumbs/our_work_03.png" class="image fit"><img src="images/sappan_logo_2.png"
 							title="SAPPAN project (Sharing and Automation for Privacy Preserving Attack Neutralization) project developed a collaborative platform to improve cyber-attack detection, response, and recovery across organisations while maintaining data privacy. Running from 2019 to 2022 under Horizon 2020, it focused on enabling federated threat intelligence sharing, automated incident response workflows, and machine-learning-based analytics that operate on anonymised data. By combining privacy-preserving data aggregation, visual analytics for SOC operators, and reusable incident response playbooks, SAPPAN allowed companies, national research networks, and security teams to jointly enhance situational awareness and neutralize threats more efficiently without exposing sensitive information."
 							alt="" />
@@ -148,37 +214,6 @@
 					</a>
 				</article>
 				<article class="from-right">
-					<!-- <div class="image fit"><img src="images/thumbs/02.jpg" alt="" />
-						<div
-							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(57, 69, 75, 0.7); padding: 1em; text-align: left; color: #fff; overflow-y: auto; box-sizing: border-box; z-index: 1;">
-							<div
-								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/css/images/overlay.png'); z-index: 1; pointer-events: none;">
-							</div>
-							<div style="position: relative; z-index: 2;">
-								<p style="margin: 0;">
-									<br>
-									<b>PRECINCT</b> (Preparedness and Resilience Enforcement for Critical Infrastructure
-									Cascading
-									Cyber-physical Threats) focused on enhancing the resilience of interconnected
-									critical
-									infrastructures across Europe by developing a unified cyber-physical security and
-									resilience management platform. Funded under the EU’s Horizon 2020 programme (Grant
-									No.
-									101021668), PRECINCT ran from October 2021 to October 2023 with a budget of
-									approximately €9.47 million.
-									Through a combination of digital twins, serious games, and AI-enabled modelling, the
-									project helped private and public stakeholders in four large-scale living labs
-									simulate
-									cascading multi-hazard scenarios involving water, transport, energy and telecom
-									infrastructures — enabling real-time decision support, interdependency analysis and
-									rapid recovery planning for smart cities and regions.
-									The outcome was a set of ready-to-use tools and services aimed at reducing costs,
-									improving efficiency and strengthening the safety, security and operational
-									sustainability of critical infrastructure ecosystems.
-								</p>
-							</div>
-						</div>
-					</div> -->
 					<a href="images/thumbs/our_work_04.png" class="image fit"><img src="images/precinct_logo_2.png"
 							title="PRECINCT Project (Preparedness and Resilience Enforcement for Critical Infrastructure
 						Cascading
@@ -235,41 +270,27 @@
 					</a>
 				</article>
 				<article class="from-right">
-					<a href="images/thumbs/our_work_04.png" class="image fit"><img src="images/thumbs/04.jpg" title="PRECINCT Project (Preparedness and Resilience Enforcement for Critical Infrastructure
-							Cascading
-							Cyber-physical Threats) focused on enhancing the resilience of interconnected
-							critical
-							infrastructures across Europe by developing a unified cyber-physical security and
-							resilience management platform. Funded under the EU’s Horizon 2020 programme (Grant
-							No.
-							101021668), PRECINCT ran from October 2021 to October 2023 with a budget of
-							approximately €9.47 million.
-							Through a combination of digital twins, serious games, and AI-enabled modelling, the
-							project helped private and public stakeholders in four large-scale living labs
-							simulate
-							cascading multi-hazard scenarios involving water, transport, energy and telecom
-							infrastructures — enabling real-time decision support, interdependency analysis and
-							rapid recovery planning for smart cities and regions.
-							The outcome was a set of ready-to-use tools and services aimed at reducing costs,
-							improving efficiency and strengthening the safety, security and operational
-							sustainability of critical infrastructure ecosystems." alt="" />
+					<a href="images/thumbs/dashboard.png" class="image fit"
+						style="position: relative; display: block; overflow: hidden;"><img
+							src="images/thumbs/dashboard.png" title="The Attack-Defence Simulator is a tool 
+						designed to help critical infrastructure operators to learn about 
+						the risks and vulnerabilities of their systems and to develop 
+						strategies to mitigate them." alt="" />
 						<div
-							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(14, 126, 117, 0.7); padding: 1em; text-align: left; color: #fff; overflow-y: auto; box-sizing: border-box; z-index: 1;">
+							style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(14, 126, 117, 0.7); padding: 1em; text-align: left; color: #fff; overflow: hidden; box-sizing: border-box; z-index: 1;">
 							<div
 								style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('assets/css/images/overlay.png'); z-index: 1; pointer-events: none;">
 							</div>
 							<div style="position: relative; z-index: 2;">
 								<p style="margin: 0;">
 									<br>
-									<b style="text-align: center; display: block;">PRECINCT Project</b>
+									<b style="text-align: center; display: block;">Attack-Defence Simulator</b>
 								</p>
 							</div>
 						</div>
 					</a>
 				</article>
 				<article class="from-left">
-					<!-- <a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg"
-							title="The sparkling shell" alt="" /></a> -->
 					<a href="images/thumbs/our_work_03.png" class="image fit"><img src="images/thumbs/05.jpg"
 							title="SAPPAN project (Sharing and Automation for Privacy Preserving Attack Neutralization) project developed a collaborative platform to improve cyber-attack detection, response, and recovery across organisations while maintaining data privacy. Running from 2019 to 2022 under Horizon 2020, it focused on enabling federated threat intelligence sharing, automated incident response workflows, and machine-learning-based analytics that operate on anonymised data. By combining privacy-preserving data aggregation, visual analytics for SOC operators, and reusable incident response playbooks, SAPPAN allowed companies, national research networks, and security teams to jointly enhance situational awareness and neutralize threats more efficiently without exposing sensitive information."
 							alt="" />
@@ -333,68 +354,50 @@
 			<header style="text-align: center;">
 				<h2>Our Team</h2>
 			</header>
-			<span class="image left"><img src="images/fulls/des_photo.png" width="100" height="100"
-					alt="Dr. Desmond Chambers" /></span>
-			<h3>Dr. Desmond Chambers</h3>
-			<p>Dr. Desmond Chambers is a Lecturer at the School of Computer Science, University of Galway. His
-				research spans cybersecurity and data analytics, with work on DDoS mitigation, IoT/network traffic
-				management, and applications of computing in healthcare. He has published on
-				unsupervised/self-supervised approaches for ISP-scale DDoS defence and earlier work in medical
-				informatics and wireless sensing.
-				<br>
-				Key topics (for tags)
-				AI/ML · Network Security · DDoS Mitigation · IoT · Traffic Analytics · Medical Informatics
-				<br>
-				<br>
-			</p>
 
-			<span class="image left"><img src="images/fulls/enda_photo.png" width="100" height="100"
-					alt="Dr. Enda Barrett" /></span>
-			<h3>Dr. Enda Barrett</h3>
-			<p>Dr. Enda Barrett is an assistant Professor (Lecturer Above the Bar), School of Computer Science —
-				University of Galway
-				research.universityofgalway.ie
+			<div class="from-left">
+				<span class="image left"><img src="images/fulls/enda_photo.png" alt="Dr. Enda Barrett" /></span>
+				<h3>Dr. Enda Barrett</h3>
+				<p>Dr. Enda Barrett is an assistant Professor (Lecturer Above the Bar), School of Computer Science —
+					University of Galway
+					research.universityofgalway.ie
 
-				He works at the intersection of machine learning, cloud and distributed computing, and
-				cybersecurity. He has over 50 peer-reviewed publications, holds multiple patents, and leads
-				analytics-driven research in AI and cyber defence. His earlier industrial career included
-				enterprise-level data integration, acoustic event classification, and ontology design, and since 2015 he
-				has focused on academic research and teaching.
-				<br>
-				Key Topics: Machine Learning · Cloud/Distributed Computing · Cybersecurity · Computer Vision · Data
-				Analytics
-				<br>
-				<br>
-			</p>
+					He works at the intersection of machine learning, cloud and distributed computing, and
+					cybersecurity. He has over 50 peer-reviewed publications, holds multiple patents, and leads
+					analytics-driven research in AI and cyber defence. His earlier industrial career included
+					enterprise-level data integration, acoustic event classification, and ontology design, and since
+					2015 he
+					has focused on academic research and teaching.
+					<br>
+					Key Topics: Machine Learning · Cloud/Distributed Computing · Cybersecurity · Computer Vision · Data
+					Analytics
+					<br>
+					<br>
+				</p>
+			</div>
 
-			<span class="image left"><img src="images/fulls/ili_photo.png" width="100" height="100"
-					alt="Dr. Ili Ko" /></span>
-			<h3>Dr. Ili Ko</h3>
-			<p>A researcher specializing in machine learning for network and cybersecurity applications. She has worked
-				across academia and industry, contributing to EU Horizon 2020 projects SAPPAN and PRECINCT, where she
-				developed host profiling and data mining frameworks to strengthen critical infrastructure resilience.
-				Her PhD research at NUI Galway focused on ML-based DDoS mitigation and network anomaly detection. She
-				also worked in industry as a data scientist, developing AI-driven analytics and quality assurance
-				systems at EdgeTier. Ili’s work bridges research and practice to advance secure, data-driven systems.
-				<br>
-				Key Topics: Machine Learning · Network Security · Anomaly Detection · DDoS Mitigation · AI in
-				Cybersecurity · Data Analytics · LLMs & NLP
-				<br>
-				<br>
-			</p>
+			<div class="from-right">
+				<span class="image left"><img src="images/fulls/ili_photo.png" alt="Dr. Ili Ko" /></span>
+				<h3>Dr. Ili Ko</h3>
+				<p>A researcher specializing in machine learning for network and
+					cybersecurity applications. She has worked
+					across academia and industry, contributing to EU Horizon 2020 projects
+					SAPPAN and PRECINCT, where she developed host profiling and data mining
+					frameworks to strengthen critical infrastructure resilience. Her PhD
+					research at NUI Galway focused on ML-based DDoS mitigation and network
+					anomaly detection. She also has industry experience as a data scientist,
+					where she contributed to AI-driven analytics and quality assurance
+					systems at EdgeTier. Ili's work bridges research and practice to advance secure,
+					data-driven systems.
+					<br>
+					Key Topics: Machine Learning · Network Security · Anomaly Detection ·
+					DDoS Mitigation · AI in Cybersecurity · Data Analytics · LLMs & NLP
+					· Agentic AI
+					<br>
+					<br>
+				</p>
+			</div>
 
-			<span class="image left"><img src="images/lightnet_photo.png" width="100" height="100"
-					alt="Dr. Ili Ko" /></span>
-			<h3>Lightnet</h3>
-			<p>An Irish internet service provider founded in 2006 and based in Loughrea, County Galway. The
-				company delivers high-speed broadband solutions—including fibre-to-the-home (FTTH), VDSL, and fixed
-				wireless—to both residential and business customers, with a strong focus on rural and semi-rural regions
-				such as Galway, Clare, and Tipperary. Known for its reliable service and excellent local customer
-				support, Lightnet has built a reputation for bridging the digital divide in underserved communities by
-				offering dependable connectivity and VoIP services. The company continues to expand its network coverage
-				across western Ireland, maintaining one of the highest customer satisfaction ratings among regional
-				ISPs.
-			</p>
 		</div>
 	</section>
 
